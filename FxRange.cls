@@ -9,7 +9,7 @@ Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = True
 ''' Class to manage Table-like Range
 ''' Version 0.1.0
-''' Note: This version does not support
+
 
 Option Explicit
 Private Const ModuleName = "FxRange"
