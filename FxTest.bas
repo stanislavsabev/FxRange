@@ -25,7 +25,7 @@ Sub FxTest_RunAll(Optional Verbose = False)
     End If
     
     For i = 0 To this.TestsCount - 1
-        FxTest_RunSingle this.Tests(i)
+        RunSingle this.Tests(i)
     Next
     
     this.Last = this.Tests(this.TestsCount - 1)
@@ -47,7 +47,7 @@ Public Function PrintLastResult() As String
     PrintVerboseSingle this.Last
 End Function
 
-Public Sub FxTest_RunSingle(Test As TTest)
+Private Sub RunSingle(Test As TTest)
     
     ' each test should return string with details if failed, or empty string if succeeded
     Test.Details = Application.Run(Test.Name)
@@ -121,7 +121,7 @@ End Sub
 Private Sub PrintSimple()
     Dim i       As Long
     For i = 0 To this.TestsCount - 1
-        Debug.Print IIf(this.Tests(i).Failed, "Fail ", ". ");
+        Debug.Print IIf(this.Tests(i).Failed, " Fail ", ".");
     Next
 End Sub
 

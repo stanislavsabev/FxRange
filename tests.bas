@@ -13,7 +13,6 @@ Function test_calling_Init_more_than_once_should_raise_InitError() As String
     sut.Init Rng
     sut.Init Rng
     ErrNumber = Err.Number
-    Debug.Print "Raising: ", Err.Number; Err.Source, Err.Description
     On Error GoTo 0
    
     ' Verify
@@ -38,7 +37,6 @@ Function test_calling_Init_with_empty_Range_should_raise_ObjectNotSetError() As 
     On Error Resume Next
     sut.Init Rng
     ErrNumber = Err.Number
-    Debug.Print "Raising: ", Err.Number; Err.Source, Err.Description
     On Error GoTo 0
    
     ' Verify
