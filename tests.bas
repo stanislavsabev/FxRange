@@ -1,4 +1,4 @@
-Attribute VB_Name = "tests"
+Attribute VB_Name = "Tests"
 
 Function test_calling_Init_more_than_once_should_raise_InitError() As String
     Dim ErrNumber   As Long
